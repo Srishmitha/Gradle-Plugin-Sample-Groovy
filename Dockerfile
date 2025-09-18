@@ -1,4 +1,4 @@
-FROM gradle:jdk24-noble
+FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY ./build/libs/simple-gradle-java-app.jar
-CMD ["gradle","-jar",".jarfile"]
+COPY ./build/libs/simple-gradle-java-app.jar .
+CMD ["java","-jar","simple-gradle-java-app.jar"]
